@@ -31,13 +31,13 @@ This API uses - to authenticate clients and role-based access control (RBAC) to 
 
 ### Endpoints
 
-| Endpoint       | Method | Description  | Parameters | Example Responses |
-| -------------- | ------ | ------------ | ---------- | ----------------- |
-| /resources     | POST   | Create       | {""}       |
-| /resources     | GET    | Get all      |
-| /resources/:id | GET    | Get by Id    |
-| /resources/:id | PUT    | Update by Id |
-| /resources/:id | DELETE | Delete by Id |
+#### User Service
+
+| Endpoint     | Method | Description                            | Parameters                                  | Example Responses                                             |
+| ------------ | ------ | -------------------------------------- | ------------------------------------------- | ------------------------------------------------------------- |
+| /v1/register | POST   | Create an account                      | {"email" : "string", "password" : "string"} | {"id" : "string", "email" : "string", "createdAt" : "string"} |
+| /v1/login    | POST   | Login and get a JWT for authentication | {"email" : "string", "password" : "string"} | {"token" : "string"}                                          |
+| /v1/profile  | GET    | Get current user data                  |                                             | {"email" : "string"}                                          |
 
 ## License
 

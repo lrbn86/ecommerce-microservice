@@ -1,6 +1,6 @@
-# Service Name
+# User Service
 
-This service
+This service is responsible for user management
 
 ## Table of Contents
 
@@ -11,8 +11,9 @@ This service
 
 ## Features
 
-- Feature 1
-- Feature 2
+- Registration
+- Login
+- Profile Management
 
 ## Getting Started
 
@@ -27,17 +28,15 @@ This a [RESTful API](https://restfulapi.net/). It works only with JSON when acce
 
 ### Authentication & Authorization
 
-This API uses - to authenticate clients and role-based access control (RBAC) to authorize clients on certain actions.
+This API uses JWT to authenticate clients and role-based access control (RBAC) to authorize clients on certain actions.
 
 ### Endpoints
 
-| Endpoint       | Method | Description  | Parameters | Example Responses |
-| -------------- | ------ | ------------ | ---------- | ----------------- |
-| /resources     | POST   | Create       | {""}       |
-| /resources     | GET    | Get all      |
-| /resources/:id | GET    | Get by Id    |
-| /resources/:id | PUT    | Update by Id |
-| /resources/:id | DELETE | Delete by Id |
+| Endpoint     | Method | Description                            | Parameters                                  | Example Responses                                             |
+| ------------ | ------ | -------------------------------------- | ------------------------------------------- | ------------------------------------------------------------- |
+| /v1/register | POST   | Create an account                      | {"email" : "string", "password" : "string"} | {"id" : "string", "email" : "string", "createdAt" : "string"} |
+| /v1/login    | POST   | Login and get a JWT for authentication | {"email" : "string", "password" : "string"} | {"token" : "string"}                                          |
+| /v1/profile  | GET    | Get current user data                  |                                             | {"email" : "string"}                                          |
 
 ## License
 
