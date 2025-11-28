@@ -1,6 +1,6 @@
-# Project Title
+# Ecommerce Microservice
 
-This project
+This project is a RESTful API for a ecommerce platform using the microservice architecture
 
 ## Table of Contents
 
@@ -11,8 +11,12 @@ This project
 
 ## Features
 
-- Feature 1
-- Feature 2
+- User Service - handle user registration, authentication, and profile management
+- Product Catalog Service - manage product listings, categories, and inventory
+- Shopping Cart Service - manage users' shopping carts, including adding/removing items and updating quantities
+- Order Service - processes orders, including placing orders, tracking order status, managing order history
+- Payment Service - handles payment processing, integrating with external payment gateways
+- Notification Service - sends email and SMS notifications for various events
 
 ## Getting Started
 
